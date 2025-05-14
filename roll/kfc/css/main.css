@@ -404,9 +404,11 @@
 .sitemap__list a {
    position: relative;
    text-decoration: none;
-   color: #000;
+   color: #000; /* 기본은 검정 */
+   font-size: 1rem;
 }
 
+/* 마우스 hover시 밑줄 */
 .sitemap__list a::after {
    content: '';
    position: absolute;
@@ -414,12 +416,19 @@
    left: 0;
    width: 0;
    height: 2px;
-   background-color: rgba(0, 0, 0, 0.6);
+   background-color: currentColor; /* 💡 글자 색상과 동일하게 */
 }
 
 .sitemap__list a:hover::after {
    width: 100%;
-} /* 리스트 레이아웃 */
+}
+
+/* 하위 메뉴 a 태그: 회색, 작게 */
+.sitemap__sublist a {
+   color: #777;
+   font-size: 0.8rem;
+}
+/* 리스트 레이아웃 */
 
 .sitemap__list > ul {
    display: flex;
