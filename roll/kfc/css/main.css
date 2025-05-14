@@ -391,6 +391,7 @@
    max-width: 1080px;
    margin: 0 auto;
    font-size: 0.8rem;
+   padding-left: 30px;
 }
 
 .sitemap-logo {
@@ -437,7 +438,8 @@
 }
 
 .sitemap__list > ul > li {
-   flex: 1;
+   flex: 1 1 16.66%; /* 6개 균등 배치 */
+   box-sizing: border-box;
    text-align: left;
 }
 
@@ -457,14 +459,32 @@
 /* pm */
 .pm {
    height: 60px;
-   background-color: #555;
-}
-
-.info {
-   height: 270px;
    background-color: #333;
 }
 
+/* 이것저것 정보*/
+.info {
+   height: 270px;
+   background-color: #212121;
+}
+
+.info__links ul {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 10px 24px; /* 행간/열간 여백 */
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+.info__links li a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 0.9rem;
+}
+
+/* 바닥 메뉴 */
 .footer__nav {
    display: none;
 }
@@ -478,6 +498,15 @@
 }
 
 @media (max-width: 1024px) {
+   .sitemap__list > ul > li {
+      flex: 1 1 20%; /* 한 줄에 5개 */
+   }
+
+   /* 6번째 li (인재채용)만 강제로 줄바꿈 */
+   .sitemap__list > ul > li:nth-child(6) {
+      flex: 1 1 100%; /* 전체 너비 사용해서 줄바꿈 유도 */
+      margin-top: 16px;
+   }
 }
 
 @media (max-width: 1000px) {
@@ -596,4 +625,6 @@
       display: flex;
       flex-direction: column;
    }
+
+
 }
