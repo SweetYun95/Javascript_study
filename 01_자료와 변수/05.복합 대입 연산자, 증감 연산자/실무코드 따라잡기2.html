@@ -6,6 +6,18 @@
       <title>Document</title>
    </head>
    <body>
-      <script></script>
+      <script>
+         // 로그인 시도 횟수 저장
+
+         const login = true // 로그인 시도 여부
+         let loginCount = 0 // 로그인 시도 횟수
+
+         // 로그인을 시도했을때
+         if (login) {
+            loginCount++
+         }
+
+         document.write(`로그인 시도 횟수: ${loginCount} 회`)
+      </script>
    </body>
 </html>
