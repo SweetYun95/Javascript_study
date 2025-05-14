@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 티켓 예매: 1장만 예매가능, 15~23시 사이 예매 가능
+         var ticket = prompt('예매수량을 입력해주세요.') // 티켓 예매 수량
+         // Number(값): 해당 값을 숫자 타입으로 바꿔준다
+         console.log(Number(ticket))
+         console.log(ticket)
+         console.log(typeof Number(ticket))
+         console.log(typeof ticket)
+         var time = 16
+
+         // var now = new Date()
+         // console.log(now)
+         // var time = now.getHours()
+         // console.log(time)
+
+         if (ticket == 1 && time >= 15 && time <= 23) {
+            document.write('예매가 완료되었습니다.')
+         }
+      </script>
+   </body>
+</html>

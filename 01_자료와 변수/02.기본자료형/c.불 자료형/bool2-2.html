@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 확인: 사용자가 입력한 값을 변수에 저장
+         // 취소: null값을 변수에 저장
+         var name = prompt('당신의 이름은?')
+         console.log(name)
+
+         // prompt: 모든 값을 문자형으로 받아온다
+         // 취소 버튼을 눌러도 null은 "null" 문자형으로 받아온다
+
+         // undefined, null, 빈문자열, 0 => false
+
+         // 값을 입력 -> 확인 버튼 클릭시 -> 문자열 name의 값 true -> if문 안의 코드 실행
+         // 값을 입력 X -> 확인 버튼 클릭시 -> 문자열 name의 값 false -> if문 안의 코드 실행 X
+         // 취소 버튼 클릭시 "null"이라는 값이 있는 문자열로 인식 -> true로 인식 -> if문 실행
+         if (name) {
+            document.write('내 이름은 ' + name)
+         }
+
+         
+      </script>
+   </body>
+</html>
