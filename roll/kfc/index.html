@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>KFC</title>
+
+      <!-- fontawesome -->
+      <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.min.css" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+      <!-- 우선순위 -->
+      <link rel="stylesheet" href="./css/common.css" />
+      <link rel="stylesheet" href="./css/main.css" />
+   </head>
+   <body>
+      <div class="wrap">
+         <header></header>
+
+         <!-- 메인 -->
+         <main>
+            <!-- 슬라이더 -->
+            <section class="slider">
+               <div class="slider__content con">
+                  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <a href="#">
+                              <div class="slide1"></div>
+                           </a>
+                        </div>
+                        <div class="carousel-item">
+                           <a href="#">
+                              <div class="slide2"></div>
+                           </a>
+                        </div>
+                        <div class="carousel-item">
+                           <a href="#">
+                              <div class="slide3"></div>
+                           </a>
+                        </div>
+                     </div>
+                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                     </button>
+                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                     </button>
+                  </div>
+               </div>
+            </section>
+
+            <!-- 배너 -->
+            <section class="banner">
+               <div class="banner__content">
+                  <a href="#"><img src="./images/banner_3.png" alt="배너1" class="banner-item" /></a>
+                  <a href="#"><img src="./images/banner_1.png" alt="배너2" class="banner-item" /></a>
+                  <a href="#"><img src="./images/banner_2.png" alt="배너3" class="banner-item" /></a>
+               </div>
+            </section>
+
+            <!-- 베스트 메뉴 -->
+            <section class="best-menu">
+               <div class="menu-wrap">
+                  <!-- 상단 이미지 -->
+                  <div class="menu-top-img">
+                     <img src="./images/mark.png" alt="상단 이미지 아이콘" />
+                  </div>
+
+                  <!-- 제목 + 버튼 -->
+                  <div class="menu-header">
+                     <h2 class="menu-title">BEST MENU</h2>
+                     <div class="menu-buttons">
+                        <button type="button"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button type="button"><i class="fa-solid fa-chevron-right"></i></button>
+                     </div>
+                  </div>
+
+                  <!-- 이미지 3개 -->
+                  <div class="menu-list">
+                     <div class="menu-card">
+                        <a href="#"><img src="./images/menu1.png" alt="메뉴1" /></a>
+                        <div class="menu-info">
+                           <h3 class="menu-name">켄치짜</h3>
+                           <p class="menu-desc"></p>
+                           <p class="menu-price"><i class="fa-solid fa-won-sign"></i>7,600</p>
+                        </div>
+                     </div>
+
+                     <div class="menu-card">
+                        <a href="#"><img src="./images/menu2.png" alt="메뉴2" /></a>
+                        <div class="menu-info">
+                           <h3 class="menu-name">닭껍질튀김</h3>
+                           <p class="menu-desc">닭껍질튀김+살사소스</p>
+                           <p class="menu-price"><i class="fa-solid fa-won-sign"></i>3,600</p>
+                        </div>
+                     </div>
+
+                     <div class="menu-card">
+                        <a href="#"><img src="./images/menu3.png" alt="메뉴3" /></a>
+                        <div class="menu-info">
+                           <h3 class="menu-name">텐더버켓(7조각)</h3>
+                           <p class="menu-desc">텐더 7조각</p>
+                           <p class="menu-price"><i class="fa-solid fa-won-sign"></i>7,400</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- 중앙 버튼 -->
+                  <div class="menu-more">
+                     <button type="button">다양한 메뉴 보러가기<i class="fa-solid fa-chevron-right"></i></button>
+                  </div>
+               </div>
+            </section>
+
+            <!-- QR 배너 -->
+            <section class="qr-banner">
+               <a href="#"><div></div></a>
+            </section>
+
+            <!-- 카드sns 배너 -->
+            <section class="sns-banner">
+               <div class="menu-wrap">
+                  <!-- 1영역: 상단 이미지 -->
+                  <div class="menu-top-img">
+                     <img src="./images/mark.png" alt="상단 이미지 아이콘" />
+                  </div>
+
+                  <!-- 2영역: 제목 + 버튼 -->
+                  <div class="menu-header">
+                     <h2 class="menu-title">KFC FACEBOOK, INSTAGRAM</h2>
+                  </div>
+
+                  <!-- 3영역: 카드 컨텐츠 -->
+                  <div class="sns-card_contents">
+                     <div class="banner-card">
+                        <a href="#" class="banner-link">
+                           <div class="banner__img card01">
+                              <div class="hover-card hov01">
+                                 <p>kfc_korea</p>
+                                 <p>#KFC #업그레이비 타워</p>
+                                 <div><i class="fa-solid fa-plus"></i></div>
+                              </div>
+                           </div>
+                        </a>
+                        <div class="banner__caption">
+                           <p><i class="fa-solid fa-camera-retro"></i> kfc_korea</p>
+                           <p>
+                              <a href="#"><i class="fa-solid fa-plus"></i> 팔로워</a>
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="banner-card">
+                        <a href="#" class="banner-link">
+                           <div class="banner__img card02">
+                              <div class="hover-card hov02">
+                                 <p>kfc_korea</p>
+                                 <p>#KFC #업그레이비 타워</p>
+                                 <div><i class="fa-solid fa-plus"></i></div>
+                              </div>
+                           </div>
+                        </a>
+                        <div class="banner__caption">
+                           <p><i class="fa-solid fa-camera-retro"></i> kfc_korea</p>
+                           <p>
+                              <a href="#"><i class="fa-solid fa-plus"></i> 팔로워</a>
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="banner-card">
+                        <a href="#" class="banner-link">
+                           <div class="banner__img card03">
+                              <div class="hover-card hov03">
+                                 <p>kfc_korea</p>
+                                 <p>#KFC #업그레이비 타워</p>
+                                 <div><i class="fa-solid fa-plus"></i></div>
+                              </div>
+                           </div>
+                        </a>
+                        <div class="banner__caption">
+                           <p><i class="fa-solid fa-camera-retro"></i> kfc_korea</p>
+                           <p>
+                              <a href="#"><i class="fa-solid fa-plus"></i> 팔로워</a>
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="banner-card">
+                        <a href="#" class="banner-link">
+                           <div class="banner__img card04">
+                              <div class="hover-card hov04">
+                                 <p>kfc_korea</p>
+                                 <p>#닥터페퍼 #닥터페퍼제로 <br />#KFC #업그레이비 타워</p>
+                                 <div><i class="fa-solid fa-plus"></i></div>
+                              </div>
+                           </div>
+                        </a>
+                        <div class="banner__caption">
+                           <p><i class="fa-solid fa-camera-retro"></i> kfc_korea</p>
+                           <p>
+                              <a href="#"><i class="fa-solid fa-plus"></i> 팔로워</a>
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="banner-card">
+                        <a href="#" class="banner-link">
+                           <div class="banner__img card05">
+                              <div class="hover-card hov05">
+                                 <p>kfc_korea</p>
+                                 <p>#KFC #텐더버켓&lt;br&gt;&lt;br&gt;</p>
+                                 <div><i class="fa-solid fa-plus"></i></div>
+                              </div>
+                           </div>
+                        </a>
+                        <div class="banner__caption">
+                           <p><i class="fa-solid fa-camera-retro"></i> kfc_korea</p>
+                           <p>
+                              <a href="#"><i class="fa-solid fa-plus"></i> 팔로워</a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <!-- 유튜브 -->
+            <section class="youtube">
+               <div class="menu-wrap">
+                  <!-- 상단 이미지 -->
+                  <div class="menu-top-img">
+                     <img src="./images/mark.png" alt="상단 이미지 아이콘" />
+                  </div>
+
+                  <!-- 제목 + 버튼 -->
+                  <div class="menu-header">
+                     <h2 class="menu-title">KFC YOUTUBE</h2>
+                     <div class="menu-buttons">
+                        <button type="button"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button type="button"><i class="fa-solid fa-chevron-right"></i></button>
+                     </div>
+                  </div>
+
+                  <div class="youtube__contents">
+                     <div class="youtube-con vod01"></div>
+                     <div class="youtube-con vod02 active"></div>
+                     <div class="youtube-con vod03"></div>
+                  </div>
+               </div>
+            </section>
+         </main>
+
+         <!-- 푸터 -->
+         <footer>
+            <!-- 사이트맵-모바일 화면에서 안보임 -->
+            <section class="sitemap">
+               <div class="sitemap__wrap">
+                  <div class="sitemap-logo">
+                     <img src="./images/logo.png" alt="상단 로고 아이콘" />
+                  </div>
+                  <div class="sitemap__list">
+                     <ul>
+                        <li>
+                           <a href="#">DELIVERY</a>
+                           <ul class="sitemap__sublist">
+                              <li><a href="#">추천메뉴</a></li>
+                              <li><a href="#">치킨&세트</a></li>
+                              <li><a href="#">버거&세트</a></li>
+                              <li><a href="#">스낵&사이드</a></li>
+                              <li><a href="#">음료</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">STORE</a>
+                           <ul class="sitemap__sublist">
+                              <li><a href="#">매장찾기</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">EVENT</a>
+                           <ul class="sitemap__sublist">
+                              <li><a href="#">프로모션</a></li>
+                              <li><a href="#">새소식</a></li>
+                              <li><a href="#">공지사항</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">KFC SERVICE</a>
+                           <ul class="sitemap__sublist">
+                              <li><a href="#">멤버십</a></li>
+                              <li><a href="#">카드&상품권</a></li>
+                              <li><a href="#">KFC TIP</a></li>
+                              <li><a href="#">고객센터</a></li>
+                              <li><a href="#">직영 입점 문의</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">KFC IS</a>
+                           <ul class="sitemap__sublist">
+                              <li><a href="#">브랜드</a></li>
+                              <li><a href="#">연혁</a></li>
+                              <li><a href="#">IR</a></li>
+                              <li><a href="#">NEWS</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">인재채용</a>
+                           <ul class="sitemap__sublist">
+                              <li><a href="#">KFC 인재채용</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </section>
+
+            <!-- pm(?) -->
+            <section class="pm"></section>
+
+            <!-- 이것저것정보 -->
+            <section class="info"></section>
+         </footer>
+      </div>
+      <!-- 바닥 메뉴-모바일 화면에서 보임 -->
+      <div class="footer__nav">
+         <ul class="moble_foot-manu">
+            <li>
+               <a href="#"><i class="fa-solid fa-house"></i>홈</a>
+            </li>
+            <li>
+               <a href="#"><i class="fa-solid fa-bars"></i>리스트</a>
+            </li>
+            <li>
+               <a href="#"><i class="fa-solid fa-motorcycle"></i>딜리버리</a>
+            </li>
+            <li>
+               <a href="#"><i class="fa-regular fa-user"></i>마이페이지</a>
+            </li>
+         </ul>
+      </div>
+
+      <!-- 슬라이더 script -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
