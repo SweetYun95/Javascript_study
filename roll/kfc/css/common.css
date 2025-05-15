@@ -26,6 +26,7 @@ header {
 /* 사이트맵 */
 .sitemap {
    height: 330px;
+   width: 100%;
 }
 
 .sitemap__wrap {
@@ -113,19 +114,72 @@ header {
    display: flex;
    flex-wrap: nowrap;
    justify-content: center;
-   gap: 24px;
    padding: 0;
    margin: 0;
+   padding-top: 30px;
 }
 
 .info__links li a {
-   color: #fff;
-   font-size: 0.9rem;
+   color: #ccc;
+   font-size: 0.8rem;
+   position: relative;
+   padding: 0 12px;
+}
+
+/* 첫 번째 항목만 금색 */
+.info__links li:first-child a {
+   color: #f9c936; /* 금색 계열 */
+   font-weight: bold;
+}
+
+/*  회사 정보 */
+.info__details {
+   text-align: center;
+   color: #666;
+   font-size: 0.75rem;
+   padding: 30px 16px 0;
+   line-height: 1.6;
+}
+
+.only-mobile {
+   display: none;
+}
+.only-pc {
+   display: block;
+}
+
+.lsen {
+   margin-top: 25px;
 }
 
 /* 바닥 메뉴 */
 .footer__nav {
    display: none;
+}
+
+@media (max-width: 1024px) {
+   .sitemap__list > ul > li {
+      flex: 1 1 20%; /* 한 줄에 5개 */
+   }
+
+   /* 6번째 li (인재채용)만 강제로 줄바꿈 */
+   .sitemap__list > ul > li:nth-child(6) {
+      flex: 1 1 100%; /* 전체 너비 사용해서 줄바꿈 유도 */
+      margin-top: 16px;
+   }
+}
+
+@media (min-width: 769px) {
+   .info__links li:not(:first-child) a::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60%;
+      width: 1px;
+      background-color: #555;
+   }
 }
 
 /*  모바일 (768px 이하)  */
@@ -145,17 +199,73 @@ header {
    }
    /* 이것저것 정보 */
    .info__links ul {
+      display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: center;
+      padding-top: 20px;
+      max-width: 320px;
+      margin: 0 auto;
    }
 
    .info__links li {
-      width: 48%; /* 2줄씩 정렬 */
-      margin-bottom: 8px;
+      width: 50%;
+      text-align: center;
+      font-size: 0.7rem;
+      padding: 6px 0;
+      box-sizing: border-box;
+      position: relative;
    }
 
-   .info__links li:last-child {
-      width: 100%; /* 마지막 항목은 한 줄 */
+   /* 마지막 항목은 100%로 한 줄 차지 */
+   .info__links li:nth-child(5) {
+      width: 100%;
+   }
+
+   /* 세로 구분선: 각 줄의 첫 번째 항목 오른쪽에만 표시 */
+   .info__links li:nth-child(1)::after,
+   .info__links li:nth-child(3)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 60%;
+      width: 1px;
+      background-color: #555;
+   }
+
+   .info__links a {
+      color: #ccc;
+      text-decoration: none;
+   }
+
+   .info__links li:first-child a {
+      color: #f9c936;
+      font-weight: bold;
+   }
+
+   .info__links a {
+      color: #ccc;
+      text-decoration: none;
+   }
+
+   /* 회사 정보 모바일 스타일 */
+   .info__details {
+      font-size: 0.65rem;
+      line-height: 1.4;
+      text-align: center;
+   }
+
+   .info__details > p:nth-child(3) {
+      margin-top: 20px;
+   }
+
+   /* 회사정보 */
+   .only-mobile {
+      display: block;
+   }
+   .only-pc {
+      display: none;
    }
 
    /* 모바일 화면에서만 보이는 바닥 메뉴 */
