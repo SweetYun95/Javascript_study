@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1~100까지 더하기
+         // 합산된 결과를 대입하는 변수는 반드시 초기값을 준다
+         let outPut = 0
+
+         for (let i = 1; i <= 100; i++) {
+            outPut += i
+         }
+
+         console.log(`1~100까지 모두 더한 값: ${outPut}`)
+         console.log(`---------`)
+
+         // 1~10까지 숫자 모두 곱하기
+         // 곱을 합칠려면 초기 대입 변수를 0을 주면 안된다
+         let outPut2 = 1
+
+         for (let i = 1; i <= 10; i++) {
+            outPut2 *= i
+         }
+
+         console.log(`1~10까지 모두 더한 값: ${outPut2}`)
+      </script>
+   </body>
+</html>
