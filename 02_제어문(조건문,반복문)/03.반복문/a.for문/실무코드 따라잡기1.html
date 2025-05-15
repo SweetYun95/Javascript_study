@@ -28,7 +28,7 @@
          let html2 = '<ul>'
 
          for (const i in itemsNames) {
-            html2 += `<li>${itemsNames[i]} 가격: ${itemsPrices[i]}원</li>`
+            html2 += `<li>${itemsNames[i]} 가격: ${itemsPrices[i].toLocaleString('ko-KR')}원</li>`
          }
          html2 += '</ul>'
 
