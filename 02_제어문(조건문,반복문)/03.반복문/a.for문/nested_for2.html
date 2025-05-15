@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // * 찍기
+         let outPut = '' // 초기 문자열 지정
+
+         for (let i = 1; i < 5; i++) { // i가 1에서부터 4까지 반복
+            for (let j = 0; j < i; j++) { // j가 0에서 부터 i - 1까지 반복
+               outPut += '*' // 해당반복만큼 '*'을 추가
+            }
+            outPut += '\n' // 줄바꿈 추가, 없으면 한줄로 표시됨
+         }
+         console.log(outPut)
+      </script>
+   </body>
+</html>

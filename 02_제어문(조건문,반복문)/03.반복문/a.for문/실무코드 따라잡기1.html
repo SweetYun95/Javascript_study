@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // M 쇼핑몰의 과일별 가격 배열
+         const items = [
+            ['사과 1kg', '귤 1kg', '바나나 1송이', '오렌지 12개'],
+            [18000, 8000, 5000, 12000],
+         ]
+
+         const itemsNames = items[0] // 과일 목록
+         const itemsPrices = items[1] // 가격
+
+         let html = '<ul>'
+         for (const itemsName of itemsNames) {
+            html += `<li>${itemsName}</li>`
+         }
+         html += '</ul>'
+
+         document.write(html)
+         document.write('<hr/>')
+
+         let html2 = '<ul>'
+
+         for (const i in itemsNames) {
+            html2 += `<li>${itemsNames[i]} 가격: ${itemsPrices[i]}원</li>`
+         }
+         html2 += '</ul>'
+
+         document.write(html2)
+      </script>
+   </body>
+</html>
