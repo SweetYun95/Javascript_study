@@ -380,115 +380,6 @@
    display: none;
 }
 
-/* 푸터 */
-
-/* 사이트맵 */
-.sitemap {
-   height: 330px;
-}
-
-.sitemap__wrap {
-   max-width: 1080px;
-   margin: 0 auto;
-   font-size: 0.8rem;
-   padding-left: 30px;
-}
-
-.sitemap-logo {
-   width: 200px;
-   margin-bottom: 25px;
-   padding: 0;
-}
-
-/* 사이트맵 리스트 */
-/* 마우스 hover시 밑줄 */
-.sitemap__list a {
-   position: relative;
-   text-decoration: none;
-   color: #000; /* 기본은 검정 */
-   font-size: 1rem;
-}
-
-/* 마우스 hover시 밑줄 */
-.sitemap__list a::after {
-   content: '';
-   position: absolute;
-   bottom: -2px;
-   left: 0;
-   width: 0;
-   height: 2px;
-   background-color: currentColor; /* 💡 글자 색상과 동일하게 */
-}
-
-.sitemap__list a:hover::after {
-   width: 100%;
-}
-
-/* 하위 메뉴 a 태그: 회색, 작게 */
-.sitemap__sublist a {
-   color: #777;
-   font-size: 0.8rem;
-}
-/* 리스트 레이아웃 */
-
-.sitemap__list > ul {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-}
-
-.sitemap__list > ul > li {
-   flex: 1 1 16.66%; /* 6개 균등 배치 */
-   box-sizing: border-box;
-   text-align: left;
-}
-
-.sitemap__list > ul > li > a {
-   font-weight: bold;
-}
-
-/* 사이트맵 리스트-하위 리스트 */
-.sitemap__sublist {
-   margin-top: 14px;
-}
-
-.sitemap__sublist > li {
-   margin-top: 5px;
-}
-
-/* pm */
-.pm {
-   height: 60px;
-   background-color: #333;
-}
-
-/* 이것저것 정보*/
-.info {
-   height: 270px;
-   background-color: #212121;
-}
-
-.info__links ul {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 10px 24px; /* 행간/열간 여백 */
-   padding: 0;
-   margin: 0;
-   list-style: none;
-}
-
-.info__links li a {
-   text-decoration: none;
-   color: #fff;
-   font-size: 0.9rem;
-}
-
-/* 바닥 메뉴 */
-.footer__nav {
-   display: none;
-}
-
 /* ================== 반응형 미디어 쿼리 ================== */
 /*  중간 화면 (1280px 이하) / (1024px 이하) / (1000px이하)  */
 @media (max-width: 1280px) {
@@ -524,13 +415,7 @@
 
 /*  모바일 (768px 이하)  */
 @media (max-width: 768px) {
-   header {
-      height: 55px;
-   }
 
-   .wrap {
-      margin-bottom: 53px;
-   }
 
    .banner__content {
       flex-direction: column;
@@ -599,32 +484,5 @@
       display: none;
    }
 
-   /* 푸터 */
-   .sitemap {
-      display: none;
-   }
-
-   /* 모바일 화면에서만 보이는 바닥 메뉴 */
-   /* 하단 메뉴 */
-   .footer__nav {
-      display: block;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 53px;
-      background-color: #5e59c2;
-      z-index: 1000;
-   }
-
-   .moble_foot-manu {
-      display: flex;
-   }
-
-   .moble_foot-manu > li > a {
-      display: flex;
-      flex-direction: column;
-   }
-
-
+  
 }
