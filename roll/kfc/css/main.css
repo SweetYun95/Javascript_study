@@ -206,7 +206,9 @@
 
 .sns-card_contents {
    display: flex;
+   flex-wrap: nowrap;
    justify-content: space-around;
+   width: 100%;
 }
 
 /* 카드sns 베너 이미지 부분 */
@@ -415,8 +417,6 @@
 
 /*  모바일 (768px 이하)  */
 @media (max-width: 768px) {
-
-
    .banner__content {
       flex-direction: column;
       align-items: center;
@@ -483,6 +483,4 @@
    .vod03.active::after {
       display: none;
    }
-
-  
 }
