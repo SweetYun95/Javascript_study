@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //류상진 제거하세요
+         const students = ['김영수', '이지혜', '류상진', '박미나', '서한울']
+         console.log(students)
+         /*
+            indexOf를 사용하는이유
+            1.데이터가 많아지면 indexOf로 index 번호를 구한다.
+            2.찾는 요소가 없으면 (-1)출력, 이걸이용해 사용자에게 에러메시지 보낼수 있음 if (index === -1) {alert('해당학생이 존재하지 않습니다.')} 
+         */
+
+         // indexOf(요소): 요소의 인덱스 번호를 구해준다,
+         const index = students.indexOf('류상진')
+         console.log(`류상진의 index: ${index}`)
+
+         //류상진 제거
+         students.splice(index, 1)
+         console.log(students)
+      </script>
+   </body>
+</html>
