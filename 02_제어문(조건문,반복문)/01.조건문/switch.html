@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 숫자를 입력받아 홀짝판단
+         const input = Number(prompt('정수를 입력해주세요', 0))
+
+         switch (input % 2) {
+            //2로 나눴을때 나머지 0 => 짝수
+            case 0:
+               alert('짝수입니다.')
+               break
+            //2로 나눴을때 나머지 1 => 홀수
+            case 1:
+               alert('홀수입니다.')
+               break
+
+            default:
+               alert('숫자가 아닙니다.')
+               break
+         }
+      </script>
+   </body>
+</html>

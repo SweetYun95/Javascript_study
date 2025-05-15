@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //시험점수에 따른 학점구하기, 점수는 0~100점 사이만 입력가능
+         const score = Number(prompt('점수를 입력하세요', 0))
+
+         if (score < 0 || score > 100) {
+            alert('0~100점 사이의 점수를 입력하세요')
+            location.reload() //새로고침
+         }
+
+         //좋은코드: 가독성, and혹은or 연산최소화
+         if (score >= 90) {
+            document.write('A학점입니다.')
+         } else if (score >= 80) {
+            document.write('B학점입니다.')
+         } else if (score >= 70) {
+            document.write('C학점입니다.')
+         } else if (score >= 60) {
+            document.write('D학점입니다.')
+         } else {
+            document.write('F학점입니다. 재수강하세요')
+         }
+      </script>
+   </body>
+</html>

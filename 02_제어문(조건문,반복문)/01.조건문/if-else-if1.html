@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const date = new Date() // 날짜
+         const hours = date.getHours() // 시간
+         console.log(date)
+         console.log(hours)
+
+         //아침, 점심, 저녁 시간 구하기
+         //6시이후 ~ 11시 이전, 15시 이전, 15시 이후 ~ 6시
+         if (hours >= 6 && hours < 11) {
+            alert('아침')
+         } else if (hours >= 11 && hours < 15) {
+            alert('점심')
+         } else {
+            alert('저녁')
+         }
+      </script>
+   </body>
+</html>
