@@ -14,7 +14,9 @@
 .menu-wrap {
    max-width: 1440px;
    margin: 0 auto;
+   padding: 0 20px;
    padding-bottom: 40px;
+   
 }
 
 /* 헤더 */
@@ -157,6 +159,36 @@ header {
    display: none;
 }
 
+/* Top으로 이동 버튼 */
+.go-to-top {
+   position: fixed;
+   bottom: 70px; /* 바닥 메뉴 위 여유 */
+   right: 16px;
+   width: 48px;
+   height: 48px;
+   background-color: #d32f2f;
+   color: #fff;
+   border-radius: 50%;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.7rem;
+   cursor: pointer;
+   z-index: 9999;
+}
+
+.go-to-top i {
+   font-size: 1rem;
+   margin-bottom: 2px;
+}
+
+.go-to-top span {
+   font-size: 0.65rem;
+   line-height: 1;
+}
+
 @media (max-width: 1024px) {
    .sitemap__list > ul > li {
       flex: 1 1 20%; /* 한 줄에 5개 */
@@ -199,29 +231,33 @@ header {
    }
    /* 이것저것 정보 */
    .info__links ul {
-      display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding-top: 20px;
-      max-width: 320px;
-      margin: 0 auto;
    }
 
    .info__links li {
-      width: 50%;
-      text-align: center;
-      font-size: 0.7rem;
-      padding: 6px 0;
-      box-sizing: border-box;
       position: relative;
+      width: 48%;
+      margin-bottom: 8px;
    }
 
-   /* 마지막 항목은 100%로 한 줄 차지 */
-   .info__links li:nth-child(5) {
-      width: 100%;
+   /* 마지막 항목은 한 줄 전체 */
+   .info__links li:last-child {
+      width: 48%;
+      margin-left: 0; /* 좌측으로 붙이기 */
    }
 
-   /* 세로 구분선: 각 줄의 첫 번째 항목 오른쪽에만 표시 */
+   /* 홀수: 우측 정렬 */
+   .info__links li:nth-child(odd) {
+      text-align: right;
+   }
+
+   /* 짝수: 좌측 정렬 */
+   .info__links li:nth-child(even) {
+      text-align: left;
+   }
+
+   /* 줄 간 세로선 */
    .info__links li:nth-child(1)::after,
    .info__links li:nth-child(3)::after {
       content: '';
@@ -262,10 +298,15 @@ header {
 
    /* 회사정보 */
    .only-mobile {
+      margin: 0;
       display: block;
    }
    .only-pc {
       display: none;
+   }
+
+   .info__details {
+      padding-top: 15px;
    }
 
    /* 모바일 화면에서만 보이는 바닥 메뉴 */
@@ -276,16 +317,38 @@ header {
       left: 0;
       width: 100%;
       height: 53px;
-      background-color: #5e59c2;
+      background-color: rgb(32, 7, 6);
       z-index: 1000;
+      box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.15);
    }
 
    .moble_foot-manu {
       display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+      padding: 0;
    }
 
-   .moble_foot-manu > li > a {
+   .moble_foot-manu li {
+      flex: 1;
+      list-style: none;
+      text-align: center;
+   }
+
+   .moble_foot-manu li a {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: #fff;
+      height: 100%;
+   }
+
+   .moble_foot-manu li a i {
+      font-size: 0.8rem;
+      margin-bottom: 2px;
    }
 }
