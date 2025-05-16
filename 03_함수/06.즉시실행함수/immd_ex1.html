@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var num = 100
+
+         // 라이언 개발자
+         function menu() {
+            num += 100
+            alert(num)
+         }
+         menu()
+         // 함수의 호이스팅이 일어나며 둘의 함수명이 같아서 덮어쓰기가 일어나 100이 출력된다.
+         // 어피치 개발자
+         function menu() {
+            alert(num)
+         }
+         menu()
+      </script>
+   </body>
+</html>
+1
