@@ -1,87 +1,48 @@
-/* PC 헤더 */
-.header-pc {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 40px;
-  background-color: #fff;
-  height: 120px;
-  border-bottom: 1px solid #ddd;
-}
+로그인
+딜리버리
+주문내역
 
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1;
-}
+DELIVERY
+(
+추천메뉴
+치킨&세트
+버거&세트
+스낵&사이드
+음료
+)
 
-.header-menu {
-  flex: 1;
-  margin: 0 40px;
-}
-
-.top-menu {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-  list-style: none;
-}
-
-.top-menu li a {
-  color: #444;
-  text-decoration: none;
-}
-
-.top-menu li img {
-  height: 18px;
-  vertical-align: middle;
-}
-
-.main-menu {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-
-.main-menu > li {
-  position: relative;
-}
-
-.main-menu > li > a {
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 32px;
-  left: 0;
-  background: #fff;
-  padding: 10px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  min-width: 180px;
-  z-index: 999;
-}
-
-.submenu li a {
-  display: block;
-  padding: 8px 16px;
-  color: #555;
-  text-decoration: none;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-.main-menu > li:hover .submenu {
-  display: block;
-}
-
-.promo-img img {
-  height: 60px;
-}
+STORE
+(
+매장찾기
+)
+EVENT
+(
+프로모션
+새소식
+공지사항
+)
+KFC SERVICE
+(
+멤버십
+카드&상품권
+KFC TIP
+고객센터
+전체 메뉴 보기
+)
+가맹 창업 안내
+(
+가맹 창업 설명회 신청
+가맹 상담 문의
+임대 상담 문의
+)
+KFC IS
+(
+브랜드
+연혁
+IR
+NEWS
+)
+인재채용
+(
+KFC 인재채용
+)
