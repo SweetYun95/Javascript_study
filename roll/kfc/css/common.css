@@ -28,24 +28,30 @@ header {
 
 /* PC 버전 */
 .header-pc {
+   background-color: #fff;
+   border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+   max-width: 1240px;
+   margin: 0 auto;
+   padding: 0 40px;
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
-   padding: 20px 40px;
-   background-color: #fff;
-   height: 120px;
-   border-bottom: 1px solid #ddd;
 }
 
 .header-pc .logo {
    font-size: 2rem;
    font-weight: bold;
    line-height: 1;
+   padding-top: 20px;
 }
 
 .header-menu {
    flex: 1;
    margin: 0 40px;
+   padding-top: 20px;
 }
 
 .top-menu {
@@ -110,8 +116,18 @@ header {
    display: block;
 }
 
+.promo-img {
+   margin: 0;
+   padding: 0;
+   height: auto;
+   display: flex;
+   align-items: flex-start;
+}
+
 .promo-img img {
-   height: 60px;
+   display: block;
+   margin: 0;
+   padding: 0;
 }
 
 /* 모바일 버전 (숨김 처리) */
