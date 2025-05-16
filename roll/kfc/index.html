@@ -14,7 +14,92 @@
    </head>
    <body>
       <div class="wrap">
-         <header></header>
+         <header>
+            <!-- PC 화면용 (769px 이상) -->
+            <div class="header-pc">
+               <div class="logo"><img src="./images/logo.png" alt="로고" /></div>
+               <!-- 메뉴 리스트 -->
+               <div class="header-menu">
+                  <!-- 상단 메뉴 -->
+                  <ul class="top-menu">
+                     <li><a href="#">로그인</a></li>
+                     <li><a href="#">주문내역조회</a></li>
+                     <li><a href="#">고객센터</a></li>
+                     <li><a href="#">인재채용</a></li>
+                     <li><img src="./images/mini_logo.png" alt="사용자 아이콘" /></li>
+                  </ul>
+
+                  <!-- 하단 메뉴 -->
+                  <ul class="main-menu">
+                     <li>
+                        <a href="#">DELIVERY</a>
+                        <ul class="submenu">
+                           <li><a href="#">추천메뉴</a></li>
+                           <li><a href="#">치킨&세트</a></li>
+                           <li><a href="#">버거&세트</a></li>
+                           <li><a href="#">스낵&사이드</a></li>
+                           <li><a href="#">음료</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">STORE</a>
+                        <ul class="submenu">
+                           <li><a href="#">매장찾기</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">EVENT</a>
+                        <ul class="submenu">
+                           <li><a href="#">프로모션</a></li>
+                           <li><a href="#">새소식</a></li>
+                           <li><a href="#">공지사항</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">KFC SERVICE</a>
+                        <ul class="submenu">
+                           <li><a href="#">멤버십</a></li>
+                           <li><a href="#">카드&상품권</a></li>
+                           <li><a href="#">KFC TIP</a></li>
+                           <li><a href="#">고객센터</a></li>
+                           <li><a href="#">전체 메뉴 보기</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">가맹 창업 안내</a>
+                        <ul class="submenu">
+                           <li><a href="#">가맹 창업 설명회 신청</a></li>
+                           <li><a href="#">가맹 상담 문의</a></li>
+                           <li><a href="#">임대 상담 문의</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="promo-img">
+                  <img src="./images/mark.png" alt="상단 이미지 아이콘" />
+               </div>
+            </div>
+
+            <!-- 모바일 화면용 (768px 이하) -->
+            <div class="header-mobile">
+               <input type="checkbox" id="menu-toggle" />
+               <label for="menu-toggle" class="hamburger">
+                  <i class="fa-solid fa-bars"></i>
+               </label>
+               <h1 class="logo"><img src="./images/logo.png" alt="로고" /></h1>
+               <nav class="mobile-menu">
+                  <ul>
+                     <li><a href="#">이벤트</a></li>
+                     <li><a href="#">매장찾기</a></li>
+                     <li><a href="#">고객센터</a></li>
+                     <li><a href="#">치킨</a></li>
+                     <li><a href="#">버거</a></li>
+                     <li><a href="#">사이드</a></li>
+                     <li><a href="#">음료</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </header>
 
          <!-- 메인 -->
          <main>
