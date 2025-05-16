@@ -42,16 +42,16 @@ header {
 }
 
 .header-pc .logo {
-   font-size: 2rem;
-   font-weight: bold;
-   line-height: 1;
    padding-top: 20px;
 }
 
 .header-menu {
-   flex: 1;
-   margin: 0 40px;
-   padding-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   margin-left: auto;
+   padding: 15px 0;
+   padding-right: 10px;
 }
 
 .top-menu {
@@ -60,12 +60,10 @@ header {
    gap: 20px;
    font-size: 0.9rem;
    margin-bottom: 12px;
-   list-style: none;
 }
 
 .top-menu li a {
    color: #444;
-   text-decoration: none;
 }
 
 .top-menu li img {
@@ -76,7 +74,6 @@ header {
 .main-menu {
    display: flex;
    gap: 40px;
-   list-style: none;
 }
 
 .main-menu > li {
@@ -86,7 +83,6 @@ header {
 .main-menu > li > a {
    color: #000;
    font-weight: bold;
-   text-decoration: none;
    font-size: 1rem;
 }
 
@@ -98,7 +94,6 @@ header {
    background: #fff;
    padding: 10px 0;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-   list-style: none;
    min-width: 180px;
    z-index: 999;
 }
@@ -107,7 +102,6 @@ header {
    display: block;
    padding: 8px 16px;
    color: #555;
-   text-decoration: none;
    font-size: 0.9rem;
    white-space: nowrap;
 }
@@ -135,6 +129,24 @@ header {
    display: none;
 }
 
+.promo-img img {
+   height: 50px; /* 이미지 높이 축소 */
+}
+
+.promo-img {
+   flex-shrink: 0; /* 이미지 공간 고정 */
+   margin-left: 20px; /* 좌측 마진 확보 */
+}
+
+.header-menu {
+   margin-right: 40px; /* 기존보다 오른쪽 공간 여유 확보 */
+}
+
+.header-inner {
+   align-items: flex-start;
+   gap: 40px; /* 전체 요소 간 여유 공간 확보 */
+}
+
 /* 푸터 */
 /* 사이트맵 */
 .sitemap {
@@ -159,7 +171,6 @@ header {
 /* 마우스 hover시 밑줄 */
 .sitemap__list a {
    position: relative;
-   text-decoration: none;
    color: #000; /* 기본은 검정 */
    font-size: 1rem;
 }
@@ -300,15 +311,88 @@ header {
    line-height: 1;
 }
 
+/* 미디어 쿼리 */
+
 @media (max-width: 1024px) {
+   /* 헤더 메뉴 */
+   .top-menu {
+      font-size: 0.75rem;
+      gap: 16px;
+   }
+
+   .main-menu > li > a {
+      font-size: 0.85rem;
+   }
+
+   .submenu li a {
+      font-size: 0.8rem;
+   }
+
+   /* 푸터 사이트 맵 */
    .sitemap__list > ul > li {
-      flex: 1 1 20%; /* 한 줄에 5개 */
+      flex: 1 1 20%;
    }
 
    /* 6번째 li (인재채용)만 강제로 줄바꿈 */
    .sitemap__list > ul > li:nth-child(6) {
-      flex: 1 1 100%; /* 전체 너비 사용해서 줄바꿈 유도 */
+      flex: 1 1 100%;
       margin-top: 16px;
+   }
+}
+
+@media (max-width: 1000px) {
+   .header-pc .logo {
+      padding-left: 0;
+      margin-right: 24px;
+   }
+
+   .header-inner {
+      align-items: flex-start;
+   }
+
+   .header-menu {
+      flex: 1;
+      margin-left: 0;
+      margin-right: 10px;
+   }
+
+   /* 상단 메뉴 */
+   .top-menu {
+      font-size: clamp(0.5rem, 0.9vw, 0.65rem); 
+      gap: 10px;
+   }
+
+   .top-menu li {
+      margin: 0 4px;
+   }
+
+   /* 메인 메뉴 */
+   .main-menu {
+      padding: 0;
+   }
+
+   .main-menu > li {
+      margin-right: 16px;
+      padding: 0;
+   }
+
+   .main-menu > li > a {
+      font-size: clamp(0.55rem, 0.95vw, 0.7rem); 
+   }
+
+   /* 서브 메뉴 */
+   .submenu {
+      padding: 0;
+   }
+
+   .submenu li {
+      margin: 2px 0;
+      padding: 0;
+   }
+
+   .submenu li a {
+      font-size: clamp(0.5rem, 0.85vw, 0.65rem); 
+      padding: 4px 10px;
    }
 }
 
@@ -349,8 +433,6 @@ header {
    }
 
    .header-mobile .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
       margin: 0 auto;
    }
 
@@ -375,20 +457,15 @@ header {
       display: block;
    }
 
-   .mobile-menu ul {
-      list-style: none;
+   .mobile-menu > .menu-list {
+      /* 최상위 메뉴 스타일 */
       margin: 0;
       padding: 16px;
    }
 
-   .mobile-menu li {
+   .mobile-menu > .menu-list > li {
+      /* 최상위 메뉴 항목 스타일 */
       margin-bottom: 12px;
-   }
-
-   .mobile-menu a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1rem;
    }
 
    /* 푸터 */
@@ -438,7 +515,6 @@ header {
 
    .info__links a {
       color: #ccc;
-      text-decoration: none;
    }
 
    .info__links li:first-child a {
@@ -448,7 +524,6 @@ header {
 
    .info__links a {
       color: #ccc;
-      text-decoration: none;
    }
 
    /* 회사 정보 모바일 스타일 */
@@ -499,7 +574,7 @@ header {
 
    .moble_foot-manu li {
       flex: 1;
-      list-style: none;
+
       text-align: center;
    }
 
