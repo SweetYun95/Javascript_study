@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 배열안의 숫자 중 최솟 값을 구하는 함수
+         function min(Array) {
+            let outPut = testArray[0]
+
+            for (const item of testArray) {
+               
+               if (outPut > item) {
+                  outPut = item
+               }
+            }
+            return // 최솟값
+         }
+
+         const testArray = [52, 273, 32, 103, 275, 24, 57]
+         console.log(`최솟값: ${min(testArray)}`)
+      </script>
+   </body>
+</html>
