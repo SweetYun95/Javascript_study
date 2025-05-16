@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function myFnuc1(a, b) {
+            return a + b
+         }
+
+         console.log(myFnuc1(1, 2))
+
+         const myFnuc2 = (a, b) => {
+            return a + b
+         }
+
+         console.log(myFnuc2(1, 2))
+
+         //  실행코드가 한줄일 때 {} 생략 가능
+         const myFnuc3 = (a, b) => console.log('합: ', a + b)
+         myFnuc3(1, 2)
+
+         //  return 값이 하나일 때 {}와 return 생략 가능
+         const myFnuc4 = (a, b) => a + b
+         console.log(myFnuc4(1, 2))
+
+         //JSON객체 데이터의 값을 리턴할 경우 {}, return생략, ({})로 사용한다.
+         const obj = { a: '1', b: '2', c: '3' } // JSON객체
+
+         const myFnuc5 = () => ({ a: '1', b: '2', c: '3' })
+         console.log(myFnuc5())
+      </script>
+   </body>
+</html>
