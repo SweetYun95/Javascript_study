@@ -1,12 +1,9 @@
 @charset "utf-8";
 
-/* common.css => 모든 html 페이지에 공통으로 적용되는 css */
-/* reset.css 삽입 */
 @import url(./reset.css);
 
 /* 공통 */
 .wrap {
-   /* max-width: 1440px; */
    margin: 0 auto;
    margin-bottom: 0;
 }
@@ -14,12 +11,10 @@
 .menu-wrap {
    max-width: 1440px;
    margin: 0 auto;
-   padding: 0 20px;
-   padding-bottom: 40px;
+   padding: 0 20px 40px;
 }
 
 /* 헤더 */
-/* 기본 헤더 스타일 */
 header {
    width: 100%;
    background-color: #fff;
@@ -39,6 +34,7 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   gap: 40px;
 }
 
 .header-pc .logo {
@@ -49,9 +45,9 @@ header {
    display: flex;
    flex-direction: column;
    align-items: flex-end;
-   margin-left: auto;
-   padding: 15px 0;
-   padding-right: 10px;
+   margin: 0 auto;
+   padding: 15px 10px 15px 0;
+   margin-right: 40px;
 }
 
 .top-menu {
@@ -74,16 +70,20 @@ header {
 .main-menu {
    display: flex;
    gap: 40px;
+   padding: 0;
+   position: relative;
 }
 
 .main-menu > li {
    position: relative;
+   padding: 0;
 }
 
 .main-menu > li > a {
    color: #000;
    font-weight: bold;
    font-size: 1rem;
+   padding: 0;
 }
 
 .submenu {
@@ -98,6 +98,20 @@ header {
    z-index: 999;
 }
 
+.main-menu:hover .submenu {
+   display: block;
+   width: 100vw;
+   left: 0;
+   padding: 16px 40px;
+   box-sizing: border-box;
+   border-top: 1px solid #eee;
+}
+
+.submenu li {
+   margin: 2px 0;
+   padding: 0;
+}
+
 .submenu li a {
    display: block;
    padding: 8px 16px;
@@ -106,12 +120,9 @@ header {
    white-space: nowrap;
 }
 
-.main-menu > li:hover .submenu {
-   display: block;
-}
-
 .promo-img {
-   margin: 0;
+   flex-shrink: 0;
+   margin-left: 20px;
    padding: 0;
    height: auto;
    display: flex;
@@ -122,31 +133,12 @@ header {
    display: block;
    margin: 0;
    padding: 0;
+   height: 50px;
 }
 
-/* 모바일 버전 (숨김 처리) */
 .header-mobile {
    display: none;
 }
-
-.promo-img img {
-   height: 50px; /* 이미지 높이 축소 */
-}
-
-.promo-img {
-   flex-shrink: 0; /* 이미지 공간 고정 */
-   margin-left: 20px; /* 좌측 마진 확보 */
-}
-
-.header-menu {
-   margin-right: 40px; /* 기존보다 오른쪽 공간 여유 확보 */
-}
-
-.header-inner {
-   align-items: flex-start;
-   gap: 40px; /* 전체 요소 간 여유 공간 확보 */
-}
-
 /* 푸터 */
 /* 사이트맵 */
 .sitemap {
@@ -343,7 +335,7 @@ header {
 @media (max-width: 1000px) {
    .header-pc .logo {
       padding-left: 0;
-      margin-right: 24px;
+      
    }
 
    .header-inner {
@@ -358,7 +350,7 @@ header {
 
    /* 상단 메뉴 */
    .top-menu {
-      font-size: clamp(0.5rem, 0.9vw, 0.65rem); 
+      font-size: clamp(0.5rem, 0.9vw, 0.65rem);
       gap: 10px;
    }
 
@@ -369,15 +361,16 @@ header {
    /* 메인 메뉴 */
    .main-menu {
       padding: 0;
+      gap: 20px
    }
 
    .main-menu > li {
-      margin-right: 16px;
+      
       padding: 0;
    }
 
    .main-menu > li > a {
-      font-size: clamp(0.55rem, 0.95vw, 0.7rem); 
+      font-size: clamp(0.5rem, 0.9vw, 0.65rem);
    }
 
    /* 서브 메뉴 */
@@ -391,7 +384,7 @@ header {
    }
 
    .submenu li a {
-      font-size: clamp(0.5rem, 0.85vw, 0.65rem); 
+      font-size: clamp(0.5rem, 0.9vw, 0.65rem);
       padding: 4px 10px;
    }
 }
