@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let numders = [1, 2, 3, 4, 5]
+
+         // 배열에서 짝수 고르고 제곱한 결과 출력
+
+         //  함수의 체이닝 기법
+         let result = numders
+            .filter((value) => value % 2 === 0) // [2,4]
+            .map((value) => value * value) // [4,16]
+            .forEach((value) => console.log(value))
+      </script>
+   </body>
+</html>

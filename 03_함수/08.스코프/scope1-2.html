@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var a = 1 // 전역변수 a
+         function vertest(a) /*매개변수 a*/ {
+            var a = a + 1 // 여기서 a는 매개변수 a
+            console.log(a) // 매개변수 a에 1을 더한값, 2 출력
+         }
+
+         vertest(a) // 전연변수 a를 가져옴
+
+         console.log(a) // 애도 전역변수 a를 가져와 1 출력
+      </script>
+   </body>
+</html>

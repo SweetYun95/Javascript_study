@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const array1 = ['a', 'b', 'c']
+
+         array1.forEach(function (element, index, array) {
+            // 콜백함수 매개변수의 갯수와 매개변수명은 마음대로 할 수 있다
+            console.log('index:', index, 'elenment:', element, 'array:', array)
+         })
+
+         array1.forEach((element, index, array) => {
+            console.log('index:', index, 'elenment:', element, 'array:', array)
+         })
+      </script>
+   </body>
+</html>

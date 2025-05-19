@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         /*
+                     depts 배열은 회사의 부서명
+                     이 회사의 개발부 3개 모두 개발부로 저장됨
+                     개발부1, 개발부2, 개발부3.. 넘버링을 해 데이터 다시 저장
+                  */
+         const depts = ['개발부', '개발부', '연구부', '개발부', '인사부', '회계부', '마케팅부']
+         let i = 0
+         const result = depts.map((dept) => {
+            if (dept.indexOf('개발부') !== -1) {
+               i++
+               return dept + i
+            } else {
+               return dept
+            }
+         })
+
+         console.log(result)
+      </script>
+   </body>
+</html>

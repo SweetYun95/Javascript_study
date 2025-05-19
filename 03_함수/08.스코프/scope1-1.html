@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function vartest() {
+            var a = 2
+            console.log(a) // var a = 2 가 지역스코프에서 정의되고 지역스코프에서 출력 명령을 내려서 출력 가능
+         }
+
+         vartest()
+
+         console.log(a) // var a = 2 가 지역스코프에서 정의되고 전역스코프에서 출력 명령을 내려서 출력 불가능
+      </script>
+   </body>
+</html>
