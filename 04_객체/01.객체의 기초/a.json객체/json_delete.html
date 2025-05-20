@@ -20,8 +20,23 @@
          // 객체 값 삭제하기
          delete dog.age
          delete dog.family[0]
+         delete dog.family[1]
          delete dog.walk
          console.log(dog)
+         // 배열 삭제 -> 삭제시 "undefined" (비어있음 표시)
+         console.log(dog.family[0])
+         console.log(dog.family[1])
+
+         // 비어있음 없에기
+
+         // 방법1 splice 이용
+         // console.log(dog.family)
+         // dog.family.splice(0,2)
+         // console.log(dog.family)
+
+         //방법2 filter 사용
+         dog.family = dog.family.filter((item) => item !== undefined)
+         console.log(dog.family)
       </script>
    </body>
 </html>
