@@ -13,6 +13,29 @@
             releaseYear: 2023,
             colors: ['Black', 'Blue', 'Pink', 'Yellow', 'Green'],
          }
+
+         document.write(iPhone15)
+         console.log(iPhone15)
+         document.write('<hr/>')
+
+         //  JSON 객체 -> 문자열
+         const jsonToString1 = JSON.stringify(iPhone15)
+         document.write(jsonToString1)
+         document.write('<hr/>')
+         console.log(jsonToString1)
+
+         //  바꾼 문자열 정렬
+         const jsonToString2 = JSON.stringify(iPhone15, null, 2)
+         document.write(jsonToString2)
+         console.log(jsonToString2)
+         document.write('<hr/>')
+
+         //  문자열 -> JSON
+         const iPhone15_2 = '{"model":"iPhone 15","manufacturer":"Apple","releaseYear":2023,"colors":["Black","Blue","Pink","Yellow","Green"]}'
+
+         const strToJson = JSON.parse(iPhone15_2)
+         document.write(strToJson)
+         console.log(strToJson)
       </script>
    </body>
 </html>
