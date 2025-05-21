@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var t = 'Hello Thank you good luck to you'
+
+         for (i in t) {
+            document.write(`(${i}:${t[i]})`)
+         }
+
+         document.write('<hr>')
+         // 해당 인덱스 번호의 문자 출력
+         document.write(t.charAt(16), '<br>')
+
+         // indexOf 문자열의 해당 문자의 인덱스 번호 처음부터 찾음, 변수값이 있다면 그 인덱스 번호부터 검색함
+         document.write(t.indexOf('you'), '<br>') // 12 출력
+         document.write(t.indexOf('you', 16), '<br>') // 29 출력
+         document.write('<hr>')
+
+         //  해당 문자열이 있는 인덱스 번호를 찾음,
+         document.write(t.search('you'), '<br>')
+
+         // 역할 substring(n, m): 문자열을 잘라서 가져옴, n번 부터 (m-1)번 인덱스를 가져온다
+         document.write(t.substring(6, 12), '<br>')
+         document.write(t.substring(0, 5), '<br>')
+         document.write('<hr>')
+         
+        //  문자열 바꾸기
+         document.write(t.replace('you', 'me'), '<br>')
+         document.write(t.length, '<br>')
+         document.write('<hr>')
+
+        //  어떤 특정 기준으로 문자열을 잘라서 배열로 만들어줌
+         var s = t.split(' ')
+         console.log(s)
+         console.log(s[0])
+         console.log(s[1])
+
+         var names = '철수/짱구/유리/맹구'
+         console.log(names.split('/'))
+
+      </script>
+   </body>
+</html>

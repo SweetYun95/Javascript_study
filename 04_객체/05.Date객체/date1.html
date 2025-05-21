@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var toDay = new Date()
+         console.log(toDay)
+
+         function getRealDay(toDay) {
+            let resultDay = ''
+            const day = toDay.getDay()
+            switch (day) {
+               case 0:
+                  resultDay = '일'
+                  break
+
+               case 1:
+                  resultDay = '월'
+                  break
+               case 2:
+                  resultDay = '화'
+                  break
+               case 3:
+                  resultDay = '수'
+                  break
+               case 4:
+                  resultDay = '목'
+                  break
+               case 5:
+                  resultDay = '금'
+                  break
+               case 6:
+                  resultDay = '토'
+                  break
+            }
+            return resultDay
+         }
+
+         // getMonth는 원래 달에 -1 로 출력되어 +1을 해줘야된다
+         document.write(`오늘은 ${toDay.getFullYear()}년 ${toDay.getMonth() + 1}월 ${toDay.getDate()}일 ${toDay.getDay()}요일`)
+
+         document.write(`오늘은 ${toDay.getFullYear()}년 ${toDay.getMonth() + 1}월 ${toDay.getDate()}일 ${getRealDay(toDay)}요일`)
+      </script>
+   </body>
+</html>
