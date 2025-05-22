@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>마우스 위치 표시</title>
+</head>
+<body>
+  <h3>마우스를 움직여 보세요!</h3>
+  <div>현재 마우스 위치: <span id="mousePos"></span></div>
+
+  <script>
+    const mousePos = document.querySelector('#mousePos');
+
+    // 마우스 움직일 때마다 좌표 업데이트
+    window.addEventListener('mousemove', function (event) {
+      const x = event.clientX; // 화면 왼쪽 기준 X좌표
+      const y = event.clientY; // 화면 위쪽 기준 Y좌표
+      mousePos.textContent = `${x}px, ${y}px`;
+    });
+  </script>
+</body>
+</html>

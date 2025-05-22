@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <select>
+         <option value="fool1">떡볶이</option>
+         <option value="fool2">순대</option>
+         <option value="fool3">오뎅</option>
+         <option value="fool4">튀김</option>
+      </select>
+      <p>선택:</p>
+
+      <script>
+         const selectEl = document.querySelector('select')
+         const p = document.querySelector('p')
+
+         // change 이벤트 등록: select, radio, check 에서 사용
+         selectEl.addEventListener('change', (e) => {
+            const options = e.currentTarget.options
+            console.log(options)
+
+            const index = e.currentTarget.options.selectedIndex
+            console.log(index)
+
+            // options[index]: 현재 선택한 옵션 요소
+            // 요소.textContent: 요소가 가진 텍스트를 읽어옴
+            p.textContent = `선택: ${options[index].textContent}`
+
+            // 옵션의 value 읽어오기
+            // const selectedFood1 = event.currentTarget.value
+            // console.log(selectedFood1)
+
+            const selectedFood2 = event.target.value
+            console.log(selectedFood2)
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         input {
+            padding: 10px;
+            font-size: 16px;
+         }
+         input:focus {
+            background-color: lightyellow;
+         }
+         label {
+            display: none;
+         }
+      </style>
+   </head>
+   <body>
+      <h3>이름 입력</h3>
+      <label for="nameInput">이름 입력</label>
+      <input type="text" name="name" id="nameInput" placeholder="이름 입력" class="nameInput" />
+      <script>
+         // 평범하게 요소를 가져옴
+         //  const inputField = document.querySelector('#nameInput')
+
+         //  id로 요소를 가져옴
+         //  const inputField = document.getElementById('nameInput')
+
+         // class로 요소를 가져옴
+         const inputField = document.getElementsByClassName('nameInput')[0] // 클래스는 여러개 있을 수 있어 배열형태로 클래스명이 저장된다.[인덱스번호로 가져온다]
+
+         inputField.addEventListener('focus', () => {
+            console.log(`입력 필드에 포커스가 되었습니다.`)
+         })
+      </script>
+   </body>
+</html>
