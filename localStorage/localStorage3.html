@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- 사용자가 웹사이트에서 입력한 이름 저장 후 나중에 방문했을 때 자동으로 불러오기 -->
+      <input type="text" name="name" id="nameInput" placeholder="이름 입력" />
+      <button onclick="saveName()">저장</button>
+      <p id="greeting"></p>
+
+      <script>
+         const name = document.querySelector('#nameInput')
+         const greeting = document.querySelector('#greeting')
+
+         // 저장
+         function saveName() {
+            localStorage.setItem('username', name.value)
+            showGreeting()
+         }
+
+         // 불러오기
+         function showGreeting() {
+            const savedName = localStorage.getItem('username')
+            
+            if (savedName) {
+               greeting.textContent = `안녕하세요, ${savedName}`
+            }
+         }
+
+         showGreeting()
+      </script>
+   </body>
+</html>
