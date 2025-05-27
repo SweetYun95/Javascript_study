@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function add(x) {
+            return new Promise((resolve) => {
+               let sum = x + x
+               console.log(sum)
+               resolve(sum)
+            }) // Promise 사용을 위해 new로 객체 생성
+         }
+         //  resolve의 역할은 then의 매개변수에 값을 전달해준다
+         add(2)
+            .then((res) => {
+               return add(res)
+            })
+            .then((res) => {
+               return add(res)
+            })
+            .then((res) => {
+               console.log('finsh: ', +res)
+            })
+      </script>
+   </body>
+</html>
