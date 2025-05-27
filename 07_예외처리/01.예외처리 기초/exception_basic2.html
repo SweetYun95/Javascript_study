@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const h1 = document.querySelector('h1')
+
+         // h1이 null이기 때문에 발생하는 에러를 조건문으로 처리
+         if (h1) {
+            h1.textContent = '안녕하세요'
+         } else {
+            console.log('h1 태그를 추출할 수 없습니다.')
+         }
+
+         console.log('완료!')
+      </script>
+   </body>
+</html>
