@@ -30,6 +30,14 @@
                // console.log(res)
                const data = await res.json() // fetch() 실행 완료하는걸 기다리고 응답 데이터를 받는걸 기다린다.
                console.log(data)
+
+               data.results.forEach((resulte) => {
+                  console.log(resulte.title)
+                  console.log(resulte.id)
+                  console.log(resulte.poster_path)
+                  console.log(resulte.vote_average)
+                  console.log('-------------------')
+               })
             } catch (error) {
                console.log('error: ', error)
             }

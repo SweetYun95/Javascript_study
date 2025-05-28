@@ -12,9 +12,9 @@
                let sum = x + x
                console.log(sum)
                resolve(sum)
-            }) // Promise 사용을 위해 new로 객체 생성
+            })
          }
-         //  resolve의 역할은 then의 매개변수에 값을 전달해준다
+
          add(2)
             .then((res) => {
                return add(res)
@@ -23,7 +23,7 @@
                return add(res)
             })
             .then((res) => {
-               console.log('finsh: ', +res)
+               console.log('finish: ' + res)
             })
       </script>
    </body>

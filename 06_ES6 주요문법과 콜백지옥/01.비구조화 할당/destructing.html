@@ -7,24 +7,24 @@
    </head>
    <body>
       <script>
-         // 객체의 비구조화 할당
-         /* ES6 이전문법
-          const contacts = {
-              famillyName: '이',
-              name: '영희',
-              age: 22,
-            }
-            
-            let famillyName = contacts.famillyName
-            let name = contacts.name
-            let age = contacts.age
-            
-            console.log(famillyName)
-            console.log(name)
-            console.log(age)            
-            */
+         //객체의 비구조화 할당
 
-         // ~~~~~~~~~~~~~~~~~~~~~~
+         //ES6 이전 문법
+         //  const contacts = {
+         //     famillyName: '이',
+         //     name: '영희',
+         //     age: 22,
+         //  }
+
+         //  let famillyName = contacts.famillyName
+         //  let name = contacts.name
+         //  let age = contacts.age
+
+         //  console.log(famillyName)
+         //  console.log(name)
+         //  console.log(age)
+
+         // ES6 문법
          //  const contacts = {
          //     famillyName: '이',
          //     name: '영희',
@@ -37,7 +37,7 @@
          //  console.log(name)
          //  console.log(age)
 
-         // 다른변수명으로 가져오고 싶을 때
+         // 다른 변수명으로 가져오고 싶을때
          const contacts = {
             famillyName: '이',
             name: '영희',
@@ -45,6 +45,7 @@
          }
 
          let { famillyName, name: otherName, age } = contacts
+
          console.log(famillyName)
          console.log(otherName)
          console.log(age)
@@ -53,6 +54,7 @@
          const arr = ['광희', '지수', '영철', 20]
 
          let [value1, value2, value3, value4] = arr
+
          console.log(value1)
          console.log(value2)
          console.log(value3)
