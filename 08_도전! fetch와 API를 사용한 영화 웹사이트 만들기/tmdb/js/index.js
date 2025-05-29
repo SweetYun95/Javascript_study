@@ -29,21 +29,21 @@ const getPlayingMovies = async (url) => {
             // if (index >= results.length) break //results 배열을 벗어나면 중단
 
             const movie = results[index]
-            // console.log(movie)
+            // console.log(movie.id)
 
             rowHtml += `
                  <div class="col-sm-3 p-3">
                       <div class="card">
-                         <a href="#">
+                         <a href="./detail.html?movie_id=${movie.id}"> 
                             <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top poster" alt="${movie.title}" />
                          </a>
                          <div class="card-body">
                             <p class="card-text title">${movie.title}</p>
-                            <p class="card-text average">${movie.vote_average.toFixed(1)}점</p>
+                            <p class="card-text average">평점 ${Number(movie.vote_average) === 0 ? '미반영' : movie.vote_average.toFixed(1)+'점'}</p>
                          </div>
                       </div>
                  </div>
-              `
+              ` // 무비 상세정보 링크  <a href="./detail.html?movie_id=${movie.id}"></a>
          }
 
          rowHtml += '</div>'
@@ -52,7 +52,7 @@ const getPlayingMovies = async (url) => {
 
       container.innerHTML = rowsHtml
    } catch (error) {
-      console.log('에러발생:', error)
+      console.error('에러발생:', error)
    }
 }
 

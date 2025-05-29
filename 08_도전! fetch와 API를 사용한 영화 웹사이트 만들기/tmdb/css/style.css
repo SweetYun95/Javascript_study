@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 /* reset.css */
+/* header.css */
 body {
    margin: 0;
    padding: 0;
@@ -23,10 +24,9 @@ p {
    margin: 0 !important;
 }
 
-/* header.css */
 /* main.css */
-main .container{
-    padding: 40px 0;
+main .container {
+   padding: 40px 0;
 }
 
 /* footer.css */
@@ -36,3 +36,51 @@ footer {
    background-color: #f2f2f2;
 }
 
+/* --------------------------------------------------------- */
+/* card 길이 안맞는 부분 수정 */
+main .container .row .card {
+   height: 100%;
+}
+
+main .container .row .card a {
+   height: 80%;
+}
+
+main .container .row .card img {
+   height: 100%;
+   object-fit: cover; /* 이미지를 높이에 맞추고 너비는 자동으로 조절(이미지 비율유지)*/
+}
+/* detail.html */
+
+main .container .movie-detail > ul.movie-info,
+p {
+   margin-bottom: 10px !important;
+}
+
+main .container ul.movie-info {
+   display: flex;
+}
+
+main .container ul.movie-info li {
+   padding-right: 13px;
+}
+/* --------------------------------------------------------- */
+/* 반응형 미디어 쿼리 */
+/* 576px ~ 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+   /* 상세 페이지 포스터가 작아진는 문제 해결 */
+   .col-sm-3 {
+      width: 40%;
+   }
+   .col-sm-9 {
+      width: 60%;
+   }
+
+   /* 상세 페이지 글자가 2줄이 되는 문제 해결 */
+   main .container ul.movie-info {
+      display: initial; /* flex 해제 */
+   }
+   main .container ul.movie-info li {
+      padding-bottom: 10px;
+   }
+}
