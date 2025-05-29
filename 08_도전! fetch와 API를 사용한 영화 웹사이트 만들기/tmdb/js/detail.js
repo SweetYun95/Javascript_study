@@ -14,7 +14,6 @@ const movieDetailUrl = `https://api.themoviedb.org/3/movie/${movieId}?language=k
 const mainContainer = document.querySelector('main .container')
 
 // 1. 영화 상세정보 바인딩
-
 const getDetailMovie = async (movieDetailUrl) => {
    try {
       const response = await fetch(movieDetailUrl, options)

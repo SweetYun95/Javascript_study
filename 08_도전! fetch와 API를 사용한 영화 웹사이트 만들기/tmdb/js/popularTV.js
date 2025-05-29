@@ -18,11 +18,8 @@ const getpopularTV = async (popularTV) => {
 
       const container = document.querySelector('main .container')
       let rowsHtml = '' // 모든 row를 담을 변수
-     
 
-
-
-      // card 2행 10열
+      // card 4행 5열
       // results.length = 20
       for (let i = 0; i < results.length; i += 4) {
          let rowHtml = '<div class="row">' // 하나의 row를 담을 변수
@@ -37,7 +34,7 @@ const getpopularTV = async (popularTV) => {
             rowHtml += `
                          <div class="col-sm-3 p-3">
                   <div class="card">
-                     <a href="#">
+                     <a href="./popularTVDetail.html">
                         <img src="https://image.tmdb.org/t/p/w500${popularTV.poster_path}" class="card-img-top poster" alt="${popularTV.name}" />
                      </a>
                      <div class="card-body">
@@ -55,7 +52,6 @@ const getpopularTV = async (popularTV) => {
       }
 
       container.innerHTML = rowsHtml
-
    } catch (error) {
       console.error('에러 발생:', error)
    }
