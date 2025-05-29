@@ -29,7 +29,8 @@ const getpopularTV = async (popularTV) => {
             // if (index >= results.length) break //results 배열을 벗어나면 중단
 
             const popularTV = results[index]
-            // console.log(popularTV.id)
+            let overview = !popularTV.overview ? `미반영` : `${popularTV.overview}`
+          
 
             rowHtml += `
                          <div class="col-sm-3 p-3">
@@ -39,8 +40,8 @@ const getpopularTV = async (popularTV) => {
                      </a>
                      <div class="card-body">
                         <p class="card-text title">${popularTV.name}</p>
-                        <p class="card-text average">평점 ${popularTV.vote_average.toFixed(1)}</p>
-                        <p>줄거리: ${popularTV.overview}</p>
+                    <p class="card-text average">평점 ${Number(popularTV.vote_average) === 0 ? '미반영' : popularTV.vote_average.toFixed(1) + '점'}</p>
+                        <p>줄거리: ${overview}</p>
                      </div>
                   </div>
                </div>

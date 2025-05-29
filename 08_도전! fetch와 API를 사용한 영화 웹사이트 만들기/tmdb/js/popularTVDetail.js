@@ -20,6 +20,7 @@ const getDetailPopularTV = async (popularTVDetailUrl) => {
       console.log(data)
 
       const imgSrc = `https://image.tmdb.org/t/p/w300${data.poster_path}`
+      let overview = !data.overview ? `미반영` : `${data.overview}`
 
       const rowHtml = `
        <div class="row">
@@ -34,7 +35,7 @@ const getDetailPopularTV = async (popularTVDetailUrl) => {
                 <li>최근 방영일: ${data.first_air_date}</li>
                 <li>처음 방영일:${data.last_air_date}분</li>
              </ul>           
-             <p>줄거리: ${data.overview}</p>
+             <p>줄거리: ${overview}</p>
           </div>
        </div> 
 `
@@ -54,15 +55,15 @@ const getSeasonsDate = async (popularTVDetailUrl) => {
       const response = await fetch(popularTVDetailUrl, options)
       const data = await response.json()
 
-       let castRowHtml = `
+      let castRowHtml = `
             <div class="row" style="margin-top:30px">
             <div class="card">
             <div class="card-body">
             `
 
       for (let i = 0; i < data.seasons.length; i++) {
-          castRowHtml += `
-         <p class="card-text">${data.seasons[i].name} (평점: ${data.seasons[i].vote_average.toFixed(1)}) - ${data.seasons[i].air_date}방영</p>
+         castRowHtml += `
+         <p class="card-text">${data.seasons[i].name} (평점: ${Number(data.seasons[i].vote_average) === 0 ? '미반영' : data.seasons[i].vote_average.toFixed(1) + '점'}) - ${data.seasons[i].air_date + '방영'}</p>
            `
       }
 

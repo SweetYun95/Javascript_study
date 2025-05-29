@@ -64,6 +64,13 @@ main .container ul.movie-info {
 main .container ul.movie-info li {
    padding-right: 13px;
 }
+
+/* popularTV */
+main .container .row .card .card-body p:last-child {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
 /* --------------------------------------------------------- */
 /* 반응형 미디어 쿼리 */
 /* 576px ~ 767px */
