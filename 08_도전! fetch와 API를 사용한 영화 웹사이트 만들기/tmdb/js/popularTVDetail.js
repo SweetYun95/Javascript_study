@@ -63,7 +63,7 @@ const getSeasonsDate = async (popularTVDetailUrl) => {
 
       for (let i = 0; i < data.seasons.length; i++) {
          castRowHtml += `
-         <p class="card-text">${data.seasons[i].name} (평점: ${Number(data.seasons[i].vote_average) === 0 ? '미반영' : data.seasons[i].vote_average.toFixed(1) + '점'}) - ${data.seasons[i].air_date + '방영'}</p>
+         <p class="card-text">${data.seasons[i].name} (평점: ${Number(data.seasons[i].vote_average) === 0 ? '미반영' : data.seasons[i].vote_average.toFixed(1) + '점'})<a href="#">보러가기</a> - ${data.seasons[i].air_date === null ? '방영일 미정' : data.seasons[i].air_date + ' 방영'}</p>
            `
       }
 

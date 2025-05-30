@@ -30,7 +30,6 @@ const getpopularTV = async (popularTV) => {
 
             const popularTV = results[index]
             let overview = !popularTV.overview ? `미반영` : `${popularTV.overview}`
-          
 
             rowHtml += `
                          <div class="col-sm-3 p-3">
