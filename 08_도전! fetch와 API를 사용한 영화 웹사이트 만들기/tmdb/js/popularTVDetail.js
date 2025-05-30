@@ -7,17 +7,14 @@ const options = {
 }
 const urlParams = new URLSearchParams(location.search)
 const popularTVId = urlParams.get('popularTV_id')
-console.log(popularTVId)
 
 const popularTVDetailUrl = `https://api.themoviedb.org/3/tv/${popularTVId}?language=ko-KR`
 const mainContainer = document.querySelector('main .container')
 
-// 1. TV프로그램 상세정보 바인딩
 const getDetailPopularTV = async (popularTVDetailUrl) => {
    try {
       const response = await fetch(popularTVDetailUrl, options)
       const data = await response.json()
-      console.log(data)
 
       const imgSrc = `https://image.tmdb.org/t/p/w300${data.poster_path}`
       let overview = !data.overview ? `미반영` : `${data.overview}`
@@ -41,7 +38,7 @@ const getDetailPopularTV = async (popularTVDetailUrl) => {
 `
       mainContainer.innerHTML += rowHtml
 
-      await getSeasonsDate(popularTVDetailUrl) // 1번 실행 후 2번 실행되게 수정
+      await getSeasonsDate(popularTVDetailUrl)
    } catch (error) {
       console.error('에러 발생:', error)
    }
@@ -49,7 +46,6 @@ const getDetailPopularTV = async (popularTVDetailUrl) => {
 
 getDetailPopularTV(popularTVDetailUrl)
 
-// 2. 시즌 데이터 바인딩
 const getSeasonsDate = async (popularTVDetailUrl) => {
    try {
       const response = await fetch(popularTVDetailUrl, options)

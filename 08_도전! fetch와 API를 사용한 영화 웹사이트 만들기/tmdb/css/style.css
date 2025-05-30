@@ -71,6 +71,14 @@ main .container .row .card .card-body p:last-child {
    text-overflow: ellipsis;
    white-space: nowrap;
 }
+
+/* peopledetaill */
+main .container .row .p-3 .card .card-body p{
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
 /* --------------------------------------------------------- */
 /* 반응형 미디어 쿼리 */
 /* 576px ~ 767px */

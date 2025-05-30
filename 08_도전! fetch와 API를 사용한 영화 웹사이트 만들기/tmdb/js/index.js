@@ -14,7 +14,6 @@ const getPlayingMovies = async (url) => {
       const data = await res.json()
 
       const results = data.results
-      //   console.log(results)
 
       const container = document.querySelector('main .container')
       let rowsHtml = '' // 모든 row를 담을 변수
@@ -29,7 +28,6 @@ const getPlayingMovies = async (url) => {
             // if (index >= results.length) break //results 배열을 벗어나면 중단
 
             const movie = results[index]
-            // console.log(movie.id)
 
             rowHtml += `
                  <div class="col-sm-3 p-3">

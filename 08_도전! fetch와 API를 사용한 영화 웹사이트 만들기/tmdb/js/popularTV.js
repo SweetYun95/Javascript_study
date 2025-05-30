@@ -14,19 +14,15 @@ const getpopularTV = async (popularTV) => {
       const data = await response.json()
 
       const results = data.results
-      console.log(results)
 
       const container = document.querySelector('main .container')
-      let rowsHtml = '' // 모든 row를 담을 변수
+      let rowsHtml = ''
 
-      // card 4행 5열
-      // results.length = 20
       for (let i = 0; i < results.length; i += 4) {
-         let rowHtml = '<div class="row">' // 하나의 row를 담을 변수
+         let rowHtml = '<div class="row">'
 
          for (let j = 0; j < 4; j++) {
             const index = i + j
-            // if (index >= results.length) break //results 배열을 벗어나면 중단
 
             const popularTV = results[index]
             let overview = !popularTV.overview ? `미반영` : `${popularTV.overview}`
@@ -44,7 +40,7 @@ const getpopularTV = async (popularTV) => {
                      </div>
                   </div>
                </div>
-              ` // 무비 상세정보 링크  <a href="./detail.html?movie_id=${movie.id}"></a>
+              `
          }
 
          rowHtml += '</div>'
